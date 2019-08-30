@@ -19,8 +19,8 @@ var basePath = '//auth' + server + '.my.ua';
 var access_token = Cookies.get('access_token');
 
 if (access_token) {
-	fetch(URL_PATH, {
-		method: basePath + '/api/v1/users/set-mail-token/',
+	fetch(basePath + '/api/v1/users/set-mail-token/', {
+		method: 'POST',
 		body: JSON.stringify({
 			access_token: access_token
 		})
